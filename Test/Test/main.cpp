@@ -2,7 +2,7 @@
 int main(int argc, char *argv[])
 {
 	int size_block;
-	if (argc == 4)//Размер блока в байтах
+	if (argc == 4)//size block in byte
 		size_block = atoi(argv[3]);
 	else
 		size_block = 1048576;

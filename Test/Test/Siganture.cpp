@@ -19,7 +19,7 @@ Siganture::~Siganture()
 {
 }
 
-void Siganture::readText()// считывание данных из файла
+void Siganture::readText()// read date from file
 {
 	char* block=new char[size_block];
 	while (infile.read(block,size_block))
@@ -33,7 +33,7 @@ void Siganture::readText()// считывание данных из файла
 			Sleep(4);
 		}
 	}
-	if(infile.gcount()<size_block && infile.gcount()>0)//если блок не полностью занят
+	if(infile.gcount()<size_block && infile.gcount()>0)//date < block
 	{
 		cntBlock++;
 		int i = infile.gcount();
@@ -51,13 +51,13 @@ void Siganture::readText()// считывание данных из файла
 	infile.close();
 }
 
-void Siganture::writeHash()// хэширование и запись в файл
+void Siganture::writeHash()// hash and write to file
 {
 	while (!blockList.empty())
 	{
 		toHash = string(blockList.front(), size_block);
 		blockList.front() = nullptr;
-		outfile << sha512(toHash);//хэширование алгоритмом sha512
+		outfile << sha512(toHash);//hash alg sha512
 		toHash = "";
 		m1.lock();
 		blockList.pop_front();
@@ -66,7 +66,7 @@ void Siganture::writeHash()// хэширование и запись в файл
 	}
 }
 
-void Siganture::startProc() //потоки
+void Siganture::startProc() //thread
 {
 	thread t3(&Siganture::manager, this);
 	thread t1(&Siganture::readText, this);
@@ -74,7 +74,7 @@ void Siganture::startProc() //потоки
 	t3.join();
 }
 
-void Siganture::manager()//следит за заполнением списка
+void Siganture::manager()// monitors the completion of the list
 {
 	while (1)
 	{
