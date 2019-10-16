@@ -1,0 +1,6 @@
+﻿  Siganture.cpp
+e:\programs\qtprojects\testt\test\test\siganture.cpp(39): warning C4244: 'initializing': conversion from 'std::streamsize' to 'int', possible loss of data
+  main.cpp
+e:\programs\qtprojects\testt\test\test\main.cpp(13): warning C4101: 'err': unreferenced local variable
+  Generating Code...
+  Test.vcxproj -> E:\programs\QTprojects\testT\Test\Debug\Test.exe
