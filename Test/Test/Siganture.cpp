@@ -49,6 +49,7 @@ void Siganture::readText()// read date from file
 	}
 	EndBlock = true;
 	infile.close();
+	delete[] block;
 }
 
 void Siganture::writeHash()// hash and write to file

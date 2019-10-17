@@ -1,3 +1,8 @@
-﻿  main.cpp
+﻿  Siganture.cpp
+e:\programs\qtprojects\testt\fromgit\testwork\test\test\siganture.cpp(39): warning C4244: 'initializing': conversion from 'std::streamsize' to 'int', possible loss of data
+  main.cpp
 e:\programs\qtprojects\testt\fromgit\testwork\test\test\main.cpp(13): warning C4101: 'err': unreferenced local variable
+  sha512.cpp
+  Generating Code...
+  LINK : E:\programs\QTprojects\testT\fromgit\testwork\Test\Debug\Test.exe not found or not built by the last incremental link; performing full link
   Test.vcxproj -> E:\programs\QTprojects\testT\fromgit\testwork\Test\Debug\Test.exe
